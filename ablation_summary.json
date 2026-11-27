@@ -1,0 +1,54 @@
+{
+  "v1_baseline": {
+    "label": "V1: Baseline (RGB only)",
+    "in_channels": 3,
+    "best_epoch": 25,
+    "val_dice": 0.5195,
+    "test": {
+      "dice": 0.5211,
+      "iou": 0.3923,
+      "recall": 0.7688,
+      "precision": 0.4719,
+      "f2": 0.763
+    }
+  },
+  "v2_clahe": {
+    "label": "V2: +CLAHE",
+    "in_channels": 3,
+    "best_epoch": 29,
+    "val_dice": 0.5417,
+    "test": {
+      "dice": 0.5345,
+      "iou": 0.4038,
+      "recall": 0.8304,
+      "precision": 0.4652,
+      "f2": 0.7676
+    }
+  },
+  "v3_features": {
+    "label": "V3: +CLAHE+LBP+Canny+HSV",
+    "in_channels": 8,
+    "best_epoch": 15,
+    "val_dice": 0.3725,
+    "test": {
+      "dice": 0.4214,
+      "iou": 0.3031,
+      "recall": 0.8126,
+      "precision": 0.374,
+      "f2": 0.7203
+    }
+  },
+  "v4_full": {
+    "label": "V4: Full (proposed)",
+    "in_channels": 9,
+    "best_epoch": 21,
+    "val_dice": NaN,
+    "test": {
+      "dice": 0.9324,
+      "iou": 0.8774,
+      "recall": 0.9426,
+      "precision": 0.9294,
+      "f2": 0.9488
+    }
+  }
+}
